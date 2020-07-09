@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#nohup python -m SimpleHTTPServer 8080 > /dev/null 2>&1 &
+nohup python -c 'import BaseHTTPServer as bhs, SimpleHTTPServer as shs; bhs.HTTPServer(("127.0.0.1", 8080), shs.SimpleHTTPRequestHandler).serve_forever() #imagehosting' > /dev/null 2>&1 &
+echo 'URL: http://localhost:8080/pic-name'
